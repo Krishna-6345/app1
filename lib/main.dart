@@ -19,9 +19,9 @@ class RegistrationScreen extends StatefulWidget {
 }
 
 class _RegistrationScreenState extends State<RegistrationScreen> {
-  String name = '';
-  String mobileNumber = '';
-  String displayText = "";
+  String name ='';
+  String mobileNumber ='';
+  String displayText ="";
 
   @override
   Widget build(BuildContext context) {
