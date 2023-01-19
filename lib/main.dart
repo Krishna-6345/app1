@@ -19,8 +19,8 @@ class RegistrationScreen extends StatefulWidget {
 }
 
 class _RegistrationScreenState extends State<RegistrationScreen> {
-  String _name = '';
-  String _mobileNumber = '';
+  String name = '';
+  String mobileNumber = '';
   String displayText = "";
 
   @override
@@ -30,7 +30,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         title: Text('Registration'),
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        
+        padding: EdgeInsets.all(150.0),
         child: Column(
           children: <Widget>[
             TextField(
@@ -38,8 +39,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 hintText: 'Enter your name',
               ),
               onChanged: (value) {
+                
                 setState(() {
-                  _name = value;
+                  name = value;
                 });
               },
             ),
@@ -50,7 +52,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               ),
               onChanged: (value) {
                 setState(() {
-                  _mobileNumber = value;
+                  mobileNumber = value;
                 });
               },
             ),
@@ -59,9 +61,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               child: Text('Submit'),
               onPressed: () {
                 setState(() {
-                  displayText = '\n Name: $_name \nMobile: $_mobileNumber';
-                  _name = "";
-                  _mobileNumber = "";
+                  displayText = '\n Name: $name \nMobile: $mobileNumber';
+                  name = "";
+                  mobileNumber = "";
                 });
               },
             ),
